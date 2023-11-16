@@ -7,8 +7,7 @@ for i in frase:
         contador = True
         if i == 'a':
             total += 1
-        
-    else:
-        contador = False
+            contador = False
+
 
 print(total)
