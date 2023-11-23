@@ -1,4 +1,4 @@
-vida = 6
+vida = 10
 penjat = False
 pCompleta = False
 acert = True
@@ -9,7 +9,18 @@ paraulaS = input("Paraula secreta: ")
 
 mida = len(paraulaS) 
 
-print(" ____  \n |  |  \n |     \n |      \n |      \n |_____")
+print("Tria dificultat: \n1. facil \n2. mitja \n3. dificil")
+dificultat = int(input())
+
+if dificultat == 1:
+    vida = 10
+    print(" _     \n |     \n |     \n |      \n |      \n |_____")
+elif dificultat == 2:
+    vida = 6
+    print(" ____  \n |  |  \n |     \n |      \n |      \n |_____")
+elif dificultat == 3:
+    vida = 3
+    print(" ____  \n |  |  \n |  O  \n | /|   \n |      \n |_____")
 
 for i in paraulaS:
     arrayPS.append(i)
@@ -22,7 +33,6 @@ for i in range(mida):
 while penjat == False and pCompleta == False:
     acert = False
     print()
-    print("Vides:",vida)
     lletra = input("Lletra: ")
 
     for i in range(mida):
@@ -32,7 +42,15 @@ while penjat == False and pCompleta == False:
 
     if acert == False:
         vida -= 1
-        if vida == 6:
+        if vida == 10:
+            print(" _     \n |     \n |     \n |      \n |      \n |_____")
+        elif vida == 9:
+            print(" __    \n |     \n |     \n |      \n |      \n |_____")
+        elif vida == 8:
+            print(" ___   \n |     \n |     \n |      \n |      \n |_____")
+        elif vida == 7:
+            print(" ____  \n |     \n |     \n |      \n |      \n |_____")
+        elif vida == 6:
             print(" ____  \n |  |  \n |     \n |      \n |      \n |_____")
         elif vida == 5:
             print(" ____  \n |  |  \n |  O  \n |      \n |      \n |_____")
